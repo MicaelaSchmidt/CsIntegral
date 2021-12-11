@@ -1,0 +1,708 @@
+$primary: rgb(152, 129, 182);
+$secondary: rgb(111, 102, 112);
+
+//nav bar css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border: black;
+
+  .navbar {
+    height: 70px;
+    background: linear-gradient(
+      90deg,
+      rgb(48, 47, 47) 38%,
+      rgba(152, 129, 182, 1) 87%
+    );
+    .logo {
+      width: fit-content;
+    }
+
+    .nav-item {
+      font-size: 14px;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-weight: 800;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .nav-item {
+    align-self: flex-end;
+    padding-right: 10px;
+  }
+  .nav-link {
+    color: $primary !important;
+    letter-spacing: 2px;
+  }
+}
+//animacion imagen animate
+#animate {
+  width: 100%;
+  height: 80vh;
+}
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.container_animate .btn-get-started {
+  font-weight: 500;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  background: $primary;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+//Hover del primer boton//
+.container_animate .btn-get-started:hover {
+  background: $secondary;
+}
+//segundo boton
+
+.container_animate .btn-watch-video {
+  background: $primary;
+  font-weight: 500;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 25px 20px 25px;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: rgb(0, 0, 0);
+  animation-duration: 3s;
+  animation-name: slidein;
+
+  .bi {
+    font-size: 20px;
+    font-weight: 300;
+    padding-right: 10px;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+//hover 2do boton
+.container_animate .btn-watch-video:hover {
+  background: $secondary;
+}
+//textos
+.container_animate h1 {
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 50px;
+}
+.container_animate h2 {
+  font-family: "Courgette", cursive;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+//responsive section animate
+@media (max-width: 991px) {
+  #Animate {
+    height: 100vh;
+    text-align: center;
+  }
+  #Animate .animated {
+    -webkit-animation: none;
+    animation: none;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #Animate {
+    text-align: center;
+  }
+  #Animate h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #Animate h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #Animate .animated {
+    width: 70%;
+  }
+}
+@media (max-width: 575px) {
+  #Animate .animated {
+    width: 80%;
+  }
+  .btn-get-started {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 24px 11px 24px;
+  }
+}
+//seccion clientes
+.cliens {
+  border: 1px solid $primary;
+  box-shadow: 2px -1px 27px 20px rgba(151, 140, 194, 0.75);
+  padding: 10px 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  .img-fluid {
+    max-width: 70%;
+    padding: 10px 0;
+    //trans. para que cuando clickees arriba tenga color
+    transition: all 0.5s ease-in-out;
+    display: inline-block; //inlineblock va a respetar los tamaños a dif de inline.
+    filter: grayscale(100); //filtro para el color
+  }
+  .img-fluid:hover {
+    filter: none; //saco el filtro
+    transform: scale(1.1);
+  }
+}
+//seccion de informacion
+
+.cardscont {
+  padding-top: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+
+  .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+  }
+  img {
+    border-radius: 50px;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+  }
+  .btn {
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid black;
+  }
+}
+
+//seccion de referencias
+.section-title {
+  padding-top: 30px;
+  h2 {
+    font-size: 40px;
+    text-shadow: 0px 2px 16px rgba(63, 33, 111, 1);
+  }
+  p {
+    font-weight: 300;
+  }
+}
+.container_refer .row {
+  margin: 0 !important; /*!! El margen de la fila 0,... em me estaba poniendo la scroll bar*/
+}
+.refer .member {
+  position: relative;
+  box-shadow: 0px 3px 12px $primary;
+  padding: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.5s;
+
+  .pic {
+    overflow: hidden;
+    width: 500px;
+    border-radius: 50%;
+    img {
+      transition: ease-in-out 0.3s;
+    }
+  }
+  h4 {
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 3px;
+    color: #000000;
+  }
+  span {
+    display: block; //que el span actue como bloque
+    padding-bottom: 10px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+//iconos de clientes, twitter, facebook, instagram, linkedIn
+
+.refer .member .social {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start; //que los lleve al inicio
+  align-items: center;
+  a {
+    transition: ease-in-out 0.5s; //transicion de 0.5s
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    margin: 0 15px;
+    background: $primary;
+  }
+  i {
+    //tengo que acordarme que puedo poner class fs-tamaño y bg-color y m-espacio
+    color: white;
+
+    font-size: 16px;
+  }
+}
+.refer .social a:hover {
+  background: black;
+}
+
+.member:hover {
+  transform: translateY(-10px);
+  background: $secondary;
+}
+
+.contacto_intro {
+  background-image: url(../img/erol-ahmed-mfEeaOfacTQ-unsplash.jpg);
+  height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .contacto_intro {
+    margin-top: -58.59px;
+  }
+}
+
+//footer css
+
+footer {
+  background-image: url(../img/wave.svg);
+  background-size: cover;
+}
+
+//aca hacer import de la hoja _nosotros
+
+.main-vid {
+  position: relative;
+  max-height: 100%;
+  overflow: hidden;
+  margin-bottom: -7px;
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(31, 39, 43, 0.75);
+  }
+  .text-vid {
+    position: absolute;
+    top: 10%;
+
+    h6 {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    h2 {
+      margin-top: 15px;
+      margin-bottom: 20px;
+      font-size: 60px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 20px;
+      max-width: 700px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .main-vid .text-vid h6 {
+    font-weight: 400;
+  }
+  .main-vid .text-vid h2 {
+    font-size: 30px;
+  }
+}
+
+#bg-video {
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  z-index: 1;
+}
+
+//Cards de informacion en NOSOTROS
+.cardsinfo {
+  position: relative;
+  margin-bottom: 300px;
+  margin-top: -500px;
+}
+
+.container__card {
+  max-width: 1200px;
+  margin: auto;
+  perspective: 1000px; //perspectiva visual
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; //que se pongan una encima de otra
+  .card__father {
+    margin: 25px;
+    perspective: 1000px;
+  }
+  .card__father:hover .card {
+    transform: rotateY(180deg); //que gire en el eje y
+  }
+  .card {
+    width: 300px;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d; //que conserve el mov 3d
+    transition: all 650ms; // una transicion ma suave
+    border-radius: 20px;
+    .card__front {
+      background-size: cover;
+      background-position: center;
+    }
+    .card__front,
+    .card__back {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden; //que no muestre la parte trasera
+      transform-style: preserve-3d;
+      border-radius: 20px;
+    }
+    .card__back {
+      transform: rotateY(180deg);
+      background: rgb(58, 56, 56);
+
+      .body__card_back {
+        text-align: center;
+        transform: translateZ(60px);
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        h1 {
+          text-transform: uppercase;
+          color: $secondary;
+          font-size: 30px;
+        }
+        p {
+          color: white;
+          margin-top: 30px;
+          font-size: 18px;
+        }
+      }
+    }
+    .body__card_front {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      transform: translateZ(60px); //que salga hacia afuera respect al eje z
+    }
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .body__card_front h1 {
+    font-size: 20px;
+    max-width: 50%;
+  }
+}
+
+//SECCION SERVICIOS
+
+.services {
+  opacity: 0.75;
+  background-image: url(../img/banner.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0px 130px 0px;
+
+  .cont-video {
+    text-align: center;
+    margin-left: 70px;
+
+    video {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+  }
+  h1 {
+    font-size: 38px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 50px;
+  }
+  .content_info {
+    text-align: center;
+
+    background-color: rgba(89, 69, 92, 0.5);
+    border-radius: 20px;
+    padding: 25px 30px 35px 30px;
+    margin: 15px 0px;
+  }
+  .cont-digit {
+    margin: 5px 0px;
+
+    color: black;
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .cont-titulo {
+    text-transform: uppercase;
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+}
+
+//SECCION DE CONTACTO -------------------------------------------
+
+.contact-us {
+  background-image: url(../img/banner2.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0px 0px 0px;
+  .right-info {
+    background-color: $primary;
+    width: 300px;
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    ul {
+      padding-left: 0;
+    }
+    li {
+      display: inline-block;
+      border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      span {
+        display: block;
+
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+    ul li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    h6 {
+      color: black;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}
+#contact {
+  background-color: $secondary;
+
+  padding: 40px;
+
+  h2 {
+    text-transform: uppercase;
+    color: #1f272b;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  input {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 140px;
+    max-height: 180px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  button {
+    font-size: 13px;
+    color: #fff;
+    background-color: $primary;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+}
+@media (max-width: 987px) {
+  .right-info {
+    margin-top: 20px;
+  }
+}
+
+//SECCION SUMATE A NOSOTROS----------------------
+
+#join {
+  background-image: url(../img/img3.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 0px;
+}
+.join-us .row {
+  justify-content: center;
+}
+.join-one {
+  background-color: $primary;
+  padding: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  .main-button a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 15px;
+  }
+  h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+}
+.join-second {
+  background-color: $secondary;
+  padding: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  .main-button a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 15px;
+  }
+  h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
