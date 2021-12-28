@@ -720,5 +720,29 @@ footer {
     margin-bottom: 20px;
   }
 }
+//-------------------------css 404 not found
+
+.container-404 {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  .cont-404 {
+    align-self: center;
+    background-color: whitesmoke;
+    padding: 10px 10px;
+
+    text-align: center;
+    .button-404 {
+      width: 25%;
+      border-radius: 10%;
+      a {
+        text-decoration: none;
+        color: #000000;
+      }
+    }
+  }
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
