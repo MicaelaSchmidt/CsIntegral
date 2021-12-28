@@ -28,7 +28,7 @@ header .navbar .nav-item {
 
 @media (max-width: 991px) {
   .navbar-collapse {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(151, 140, 194, 0.75);
   }
 
   .nav-item {
