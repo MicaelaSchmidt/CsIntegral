@@ -483,11 +483,7 @@ footer {
 }
 .services {
   opacity: 0.75;
-  background-image: url(../img/banner.jpg);
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: whitesmoke;
   padding: 50px 0px 130px 0px;
 }
 .services .cont-video {
@@ -522,7 +518,6 @@ footer {
 }
 .services .cont-titulo {
   text-transform: uppercase;
-  text-decoration: line-through;
   font-size: 18px;
   font-weight: 500;
   color: #fff;
