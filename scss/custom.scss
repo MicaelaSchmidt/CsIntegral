@@ -82,7 +82,7 @@ header {
   margin-left: 10px;
   margin-top: 10px;
   color: rgb(0, 0, 0);
-  background: $primary;
+  background: white;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -93,7 +93,7 @@ header {
 //segundo boton
 
 .container_animate .btn-watch-video {
-  background: $primary;
+  background: rgba(198, 168, 218, 0.007);
   font-weight: 500;
   font-size: 20px;
   display: inline-block;
@@ -190,7 +190,6 @@ header {
   margin-right: 20px;
   text-align: center;
   .img-fluid {
-    max-width: 70%;
     padding: 10px 0;
     //trans. para que cuando clickees arriba tenga color
     transition: all 0.5s ease-in-out;
@@ -245,18 +244,24 @@ header {
   margin: 0 !important; /*!! El margen de la fila 0,... em me estaba poniendo la scroll bar*/
 }
 .refer .member {
-  position: relative;
+  display: flex;
   box-shadow: 0px 3px 12px $primary;
   padding: 30px;
   margin-bottom: 10px;
   border-radius: 5px;
   background: #fff;
   transition: 0.5s;
+  .member-info {
+    width: auto;
+  }
 
   .pic {
     overflow: hidden;
-    width: 500px;
+
     border-radius: 50%;
+    .pic-gm {
+      width: auto;
+    }
     img {
       transition: ease-in-out 0.3s;
     }
@@ -273,6 +278,20 @@ header {
     position: relative;
     font-size: 16px;
     font-weight: 400;
+  }
+}
+@media (max-width: 992px) {
+  .pic-rn {
+    width: 100%;
+  }
+  .pic-ab {
+    width: 80%;
+  }
+  .pic-ra {
+    width: 100%;
+  }
+  .pic-gm {
+    width: 120%;
   }
 }
 

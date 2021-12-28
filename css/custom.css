@@ -77,7 +77,7 @@ header .navbar .nav-item {
   margin-left: 10px;
   margin-top: 10px;
   color: black;
-  background: #9881b6;
+  background: white;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -87,7 +87,7 @@ header .navbar .nav-item {
 }
 
 .container_animate .btn-watch-video {
-  background: #9881b6;
+  background: rgba(198, 168, 218, 0.007);
   font-weight: 500;
   font-size: 20px;
   display: inline-block;
@@ -186,7 +186,6 @@ header .navbar .nav-item {
   text-align: center;
 }
 .cliens .img-fluid {
-  max-width: 70%;
   padding: 10px 0;
   transition: all 0.5s ease-in-out;
   display: inline-block;
@@ -239,7 +238,7 @@ header .navbar .nav-item {
 }
 
 .refer .member {
-  position: relative;
+  display: flex;
   box-shadow: 0px 3px 12px #9881b6;
   padding: 30px;
   margin-bottom: 10px;
@@ -247,10 +246,15 @@ header .navbar .nav-item {
   background: #fff;
   transition: 0.5s;
 }
+.refer .member .member-info {
+  width: auto;
+}
 .refer .member .pic {
   overflow: hidden;
-  width: 500px;
   border-radius: 50%;
+}
+.refer .member .pic .pic-gm {
+  width: auto;
 }
 .refer .member .pic img {
   transition: ease-in-out 0.3s;
@@ -269,6 +273,23 @@ header .navbar .nav-item {
   font-weight: 400;
 }
 
+@media (max-width: 992px) {
+  .pic-rn {
+    width: 100%;
+  }
+
+  .pic-ab {
+    width: 80%;
+  }
+
+  .pic-ra {
+    width: 100%;
+  }
+
+  .pic-gm {
+    width: 120%;
+  }
+}
 .refer .member .social {
   margin-top: 10px;
   display: flex;
